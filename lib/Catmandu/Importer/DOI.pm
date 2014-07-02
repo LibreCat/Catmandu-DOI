@@ -158,6 +158,11 @@ sub generator {
   Catmandu::Importer::DOI - Package that imports DOI data.
   Take an existing DOI and lookup the metadata for it.
 
+=head1 DEPRECATION NOTE
+
+This module is deprecated and won't be updated. Instead see L<Catmandu::CrossRef>.
+
+
 =head1 SYNOPSIS
 
   use Catmandu::Importer::DOI;
