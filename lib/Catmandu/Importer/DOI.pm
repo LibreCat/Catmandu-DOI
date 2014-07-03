@@ -35,7 +35,7 @@ has pwd => (is => 'ro', required => 1);
 # optional.
 
 ## format is the desired results format ( xsd_xml | unixref | unixsd | info).
-has format => (is => 'ro', default => sub { 'unixref' }); 
+has fmt => (is => 'ro', default => sub { 'unixref' }); 
 
 # internal.
 has _api_key => (is => 'lazy', builder => '_get_api_key');
@@ -96,7 +96,7 @@ sub _api_call {
   my $url = $self->base;
   $url .= '?pid='.$self->_api_key;
   $url .= '&doi='.$self->doi;
-  $url .= '&format='.$self->format;
+  $url .= '&format='.$self->fmt;
 
   # http get the url.
   my $res = $self->_request($url);
